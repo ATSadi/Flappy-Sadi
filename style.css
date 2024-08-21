@@ -1,0 +1,84 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #70c5ce;
+}
+
+#gameArea {
+    width: 1000px; /* Increased width */
+    height: 700px;
+    position: relative;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('images/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#bird {
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
+    position: absolute;
+    background-image: url('images/bird.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50px;
+    border-radius: 50%;
+}
+
+#startButton, #retryButton, #gameOver {
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure horizontal center alignment */
+}
+
+#startButton, #retryButton {
+    top: 50%; /* Center vertically in the game area */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#gameOver {
+    top: 8%; /* Position slightly higher than the center */
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Stylish font */
+    font-weight: bold; /* Bold font */
+    color: yellow; /* Yellow color */
+    z-index: 10; /* Ensure it is above the pipes */
+}
+
+.hidden {
+    display: none;
+}
+
+.pipe, .pipeTop {
+    position: absolute;
+    width: 100px;
+    background-image: url('images/pipe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0;
+}
+
+.pipeTop {
+    transform: rotate(180deg);
+}
+
+#scoreBoard {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    color: #000;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
